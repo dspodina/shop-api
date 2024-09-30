@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Cake Shop</title>
+    </head>
+    <body>
+        <header>
+            <h1>Cake Shop</h1>
+            <%- include("./includes/nav.ejs")%>
+        </header>
+
+        <div class="cakes">
+            <div>
+                <img src="<%=cake.img%>" alt="<%=cake.name%>" />
+            </div>
+            <div class="cake-desc">
+                <h2><%=cake.name%></h2>
+                <p>$<%=cake.price%></p>
+                <p><%=cake.description%></p>
+                <button>
+                    <a href="/api/cakes">See all cakes</a>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
