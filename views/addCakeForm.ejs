@@ -7,10 +7,8 @@
         <title>Add a cake</title>
     </head>
     <body>
-
         <header>
             <h1>Add a new cake</h1>
-            <%- include("./includes/nav.ejs")%>
         </header>
 
         <form action="/api/add-cake" method="POST">
@@ -21,7 +19,12 @@
             <input type="number" id="price" name="price" required />
             <br />
             <label for="description">Description</label>
-            <textarea type="description" id="description" name="description" required></textarea>
+            <textarea
+                type="description"
+                id="description"
+                name="description"
+                required
+            ></textarea>
             <br />
             <label for="img">Image URL</label>
             <input type="url" id="img" name="img" required />
